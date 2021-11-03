@@ -5,7 +5,7 @@ This module is to create or get products within an Api Manager
 ## Create Example
 
 ```terraform
-module "apim_apis" {
+module "apim_product" {
   source        = "git::https://github.com/hmcts/terraform-module-apim-api"
   environment   = "sbox"
   product       = "pip"
@@ -26,7 +26,7 @@ You can also assign a user to the API, which will be added to the subscription a
 ## Get Example
 
 ```terraform
-module "apim_apis" {
+module "apim_product" {
   source        = "git::https://github.com/hmcts/terraform-module-apim-api/data"
   environment   = "sbox"
   product       = "pip"
