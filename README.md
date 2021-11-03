@@ -1,8 +1,8 @@
 # terraform-module-apim-product
 
-This module is to create products within an Api Manager
+This module is to create or get products within an Api Manager
 
-## Example
+## Create Example
 
 ```terraform
 module "apim_apis" {
@@ -14,10 +14,22 @@ module "apim_apis" {
 }
 ```
 
-## Optional User
+### Optional User
 You can also assign a user to the API, which will be added to the subscription as well.
 
 ```terraform
   user_id           = "4nc3098ey32xy2" #must be unique
   user_has_password = true
+```
+
+
+## Get Example
+
+```terraform
+module "apim_apis" {
+  source        = "git::https://github.com/hmcts/terraform-module-apim-api/data"
+  environment   = "sbox"
+  product       = "pip"
+  department    = "sds"
+}
 ```
