@@ -18,11 +18,6 @@ variable "product" {
   type        = string
   description = "Project Product name"
 }
-variable "product_display_name" {
-  type        = string
-  description = "Display Name"
-  default     = ""
-}
 variable "product_discription" {
   type        = string
   description = "Discription"
