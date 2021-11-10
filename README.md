@@ -7,7 +7,7 @@ This module is to create products within an Api Manager
 ```terraform
 module "apim_product" {
   source        = "git::https://github.com/hmcts/terraform-module-apim-product"
-  environment   = "sbox"
+  env           = "sbox"
   product       = "pip"
   department    = "sds"
   product_policy= "<XML></XML>"

@@ -9,8 +9,8 @@ resource "azurerm_api_management_product" "apim_product" {
   resource_group_name   = local.apim_rg
   api_management_name   = local.apim_name
   display_name          = var.product_display_name != "" ? var.product_display_name : "${var.product} API ${local.env} Product"
-  subscription_required = var.product_approval_required
-  approval_required     = var.product_subscription_required
+  subscription_required = var.product_subscription_required
+  approval_required     = var.product_approval_required
   published             = var.product_published
   description           = var.product_discription != "" ? var.product_discription : "This is the product for ${var.product}"
 }
